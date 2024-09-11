@@ -10,24 +10,24 @@ def test_coffee_name_validation():
 
 def test_coffee_orders():
     coffee = Coffee("Coffee")
-    customer1 = Customer("JohnDoe")
-    customer2 = Customer("AnnGlorious")
+    customer1 = Customer("Ayubu")
+    customer2 = Customer("BabaMboga")
     order1 = Order(customer1, coffee, 3.5)
     order2 = Order(customer2, coffee, 4.0)
-    assert coffee.orders() == []
+    assert coffee.order() == []
    # assert orders [] == [order.order]
 
 def test_coffee_customers():
     coffee = Coffee("Coffee")
-    customer1 = Customer("JohnDoe")
-    customer2 = Customer("AnnGlorious")
+    customer1 = Customer("Ayubu")
+    customer2 = Customer("BabaMboga")
     order1 = Order(customer1, coffee, 3.5)
     order2 = Order(customer2, coffee, 4.0)
     assert coffee.customers() == []
 
 def test_coffee_num_orders():
     coffee = Coffee("Coffee")
-    customer = Customer("JohnDoe")
+    customer = Customer("Ayubu")
     order1 = Order(customer, coffee, 3.5)
     order2 = Order(customer, coffee, 4.0)
     orders = []
@@ -35,7 +35,7 @@ def test_coffee_num_orders():
 
 def test_coffee_average_price():
     coffee = Coffee("Coffee")
-    customer = Customer("JohnDoe")
+    customer = Customer("Ayubu")
     order1 = Order(customer, coffee, 3.5)
     order2 = Order(customer, coffee, 4.0)
     assert coffee.average_price() == 3.75

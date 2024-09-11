@@ -31,7 +31,7 @@ class Coffee:
             return 0  # Return 0 if no orders exist
         total_price = sum(order.price for order in self.orders)
         return total_price / len(self.orders)
-        """Returns the average price for this coffee based on all orders."""
-      """  total_price = sum(order.price for order in self._orders)
+        """Returns the average price for this coffee based on all orders.
+      total_price = sum(order.price for order in self._orders)
         return total_price / len(self._orders) if self._orders else 0"""
     
