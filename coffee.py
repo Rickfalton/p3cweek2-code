@@ -13,9 +13,10 @@ class Coffee:
             raise ValueError("Coffee name must be a string with at least 3 characters.")
         self._name = value
 
-    def orders(self):
+    def orders(self, order):
         """Returns a list of all orders for this coffee."""
-        return self._orders
+       # return self._orders
+        self.orders.append(order)
 
     def customers(self):
         """Returns a unique list of customers who have ordered this coffee."""
@@ -26,6 +27,11 @@ class Coffee:
         return len(self._orders)
 
     def average_price(self):
+        if not self.orders:
+            return 0  # Return 0 if no orders exist
+        total_price = sum(order.price for order in self.orders)
+        return total_price / len(self.orders)
         """Returns the average price for this coffee based on all orders."""
-        total_price = sum(order.price for order in self._orders)
-        return total_price / len(self._orders) if self._orders else 0
+      """  total_price = sum(order.price for order in self._orders)
+        return total_price / len(self._orders) if self._orders else 0"""
+    
