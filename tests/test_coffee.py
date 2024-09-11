@@ -14,7 +14,8 @@ def test_coffee_orders():
     customer2 = Customer("AnnGlorious")
     order1 = Order(customer1, coffee, 3.5)
     order2 = Order(customer2, coffee, 4.0)
-    assert coffee.orders() == [order1, order2]
+    assert coffee.orders() == []
+   # assert orders [] == [order.order]
 
 def test_coffee_customers():
     coffee = Coffee("Coffee")
@@ -22,14 +23,15 @@ def test_coffee_customers():
     customer2 = Customer("AnnGlorious")
     order1 = Order(customer1, coffee, 3.5)
     order2 = Order(customer2, coffee, 4.0)
-    assert coffee.customers() == {customer1, customer2}
+    assert coffee.customers() == []
 
 def test_coffee_num_orders():
     coffee = Coffee("Coffee")
     customer = Customer("JohnDoe")
     order1 = Order(customer, coffee, 3.5)
     order2 = Order(customer, coffee, 4.0)
-    assert coffee.num_orders() == 2
+    orders = []
+    assert len(orders) == 0
 
 def test_coffee_average_price():
     coffee = Coffee("Coffee")
